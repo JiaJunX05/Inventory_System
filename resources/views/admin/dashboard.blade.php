@@ -43,9 +43,9 @@
     <div id="no-results" class="text-center py-3" style="display: none;">No results found.</div>
 
     <!-- Pagination -->
-    <div class="d-flex justify-content-center mt-3">
-         <ul id="pagination" class="pagination"></ul>
-    </div>
+    <nav aria-label="Page navigation example" class="d-flex justify-content-center mt-3">
+        <ul id="pagination" class="pagination"></ul>
+    </nav>
 </div>
 
 <script>
