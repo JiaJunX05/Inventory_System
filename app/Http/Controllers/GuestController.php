@@ -17,7 +17,7 @@ class GuestController extends Controller
 
             if ($request->filled('search')) {
                 $search = $request->input('search');
-                $query->where('name', 'like', "%{$search}%");
+                $query->where('name', 'like', '%' . $search . '%');
             }
 
             if ($request->filled('category_id')) {

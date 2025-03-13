@@ -61,7 +61,6 @@
             e.preventDefault();
         });
 
-
         // 表单提交事件
         $('#search-form').on('input', function(e) {
             e.preventDefault();
