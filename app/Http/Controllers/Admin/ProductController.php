@@ -63,7 +63,7 @@ class ProductController extends Controller
 
         if ($request->hasFile('feature')) {
             $feature = $request->file('feature');
-            $featureName = time() . '.' . $feature->getClientOriginalExtension();
+            $featureName = time() . uniqid() . '.' . $feature->getClientOriginalExtension();
             $feature->move(public_path('assets/features'), $featureName);
         }
 
@@ -122,7 +122,7 @@ class ProductController extends Controller
                 unlink(public_path('assets/' . $products->feature));
             }
 
-            $featureName = time() . '.' . $request->file('feature')->getClientOriginalExtension();
+            $featureName = time() . uniqid() . '.' . $request->file('feature')->getClientOriginalExtension();
             $request->file('feature')->move(public_path('assets/features'), $featureName);
             $products->feature = 'features/' . $featureName;
         }
