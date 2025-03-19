@@ -30,7 +30,7 @@ class CategoryController extends Controller
         return redirect()->route('category.list')->with('success', 'Category created successfully.');
     }
 
-    public function showEditForm($id) {
+    public function showUpdateForm($id) {
         $category = Category::find($id);
         return view('category.update', compact('category'));
     }

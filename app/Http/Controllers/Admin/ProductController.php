@@ -98,7 +98,7 @@ class ProductController extends Controller
         return view('admin.view', compact('product'));
     }
 
-    public function showEditForm($id) {
+    public function showUpdateForm($id) {
         $product = Product::with('category', 'images')->findOrFail($id);
         $categories = Category::all();
         return view('admin.update', compact('product', 'categories'));

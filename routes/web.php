@@ -25,7 +25,7 @@ Route::prefix('admin')->group(function() {
         Route::get('/category/list', [CategoryController::class, 'index'])->name('category.list');
         Route::get('/category/create', [CategoryController::class, 'showCreateForm'])->name('category.create');
         Route::post('/category/create', [CategoryController::class, 'create'])->name('category.create.submit');
-        Route::get('/category/update/{id}', [CategoryController::class, 'showEditForm'])->name('category.update');
+        Route::get('/category/update/{id}', [CategoryController::class, 'showUpdateForm'])->name('category.update');
         Route::put('/category/update/{id}', [CategoryController::class, 'update'])->name('category.update.submit');
         Route::delete('/category/delete/{id}', [CategoryController::class, 'destroy'])->name('category.destroy');
 
@@ -35,7 +35,7 @@ Route::prefix('admin')->group(function() {
         Route::get('/product/view/{id}', [ProductController::class, 'view'])->name('product.view');
         Route::get('/product/stock/{id}', [ProductController::class, 'showStockForm'])->name('product.stock');
         Route::put('/product/stock/{id}', [ProductController::class, 'stockUpdate'])->name('product.stock.submit');
-        Route::get('/product/update/{id}', [ProductController::class, 'showEditForm'])->name('product.update');
+        Route::get('/product/update/{id}', [ProductController::class, 'showUpdateForm'])->name('product.update');
         Route::put('/product/update/{id}', [ProductController::class, 'update'])->name('product.update.submit');
         Route::delete('/product/delete/{id}', [ProductController::class, 'destroy'])->name('product.destroy');
     });
